@@ -5,6 +5,8 @@
     <color name="colorFragmentBG">#282D43</color>
     <color name="colorAccent">#D81B60</color>8e4db7
     <color name="colorIcon">#8E4DB7</color>
+    <color name="colorPurpleStart">#8C5AE1</color>
+    <color name="colorPurpleEnd">#AB57CF</color>
     <color name="colorIconTransparent">#808E4DB7</color>
     <color name="colorWhiteTransparent">#80FFFFFF</color>
     <color name="colorTransparent">#00FFFFFF</color>

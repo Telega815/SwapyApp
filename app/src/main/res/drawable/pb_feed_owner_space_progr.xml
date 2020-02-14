@@ -9,8 +9,8 @@
                         <solid android:color="@color/colorProgressBar"/>
                         <corners android:radius="8dp"/>
                         <size
-                            android:height="15dp"
-                            android:width="15dp"/>
+                            android:height="10dp"
+                            android:width="10dp"/>
                     </shape>
 
                 </item>
