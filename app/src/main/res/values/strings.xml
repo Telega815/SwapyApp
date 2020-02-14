@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SwapyApp</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_search">Search</string>
+    <string name="title_add_post">Add post</string>
+    <string name="title_my_feed">My feed</string>
+    <string name="hint_find_feed">Find feed</string>
+    <string name="label_search">Search</string>
+    <string name="button_scan_qr">Scan QR</string>
+    <string name="label_favorite_feeds">Favorite feeds</string>
+    <string name="button_public_feed">Public feed</string>
+    <string name="button_menu">Menu</string>
+</resources>

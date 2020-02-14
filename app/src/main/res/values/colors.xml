@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#202539</color>
+    <color name="colorPrimaryDark">#202539</color>
+    <color name="colorFragmentBG">#282D43</color>
+    <color name="colorAccent">#D81B60</color>8e4db7
+    <color name="colorIcon">#8E4DB7</color>
+    <color name="colorIconTransparent">#808E4DB7</color>
+    <color name="colorWhiteTransparent">#80FFFFFF</color>
+    <color name="colorTransparent">#00FFFFFF</color>
+    <color name="colorWhite80">#CCFFFFFF</color>
+    <color name="colorBlueProfileGradStart">#4B8084</color>
+    <color name="colorBlueProfileGradEnd">#79BFC5</color>
+    <color name="colorProgressBar">#9B4747</color>
+</resources>
