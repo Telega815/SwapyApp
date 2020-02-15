@@ -7,6 +7,10 @@
     <color name="colorIcon">#8E4DB7</color>
     <color name="colorPurpleStart">#8C5AE1</color>
     <color name="colorPurpleEnd">#AB57CF</color>
+    <color name="colorPurpleTransparentStart">#808C5AE1</color>
+    <color name="colorPurpleTransparentEnd">#80AB57CF</color>
+    <color name="colorRedStart">#D2576E</color>
+    <color name="colorRedEnd">#E27D73</color>
     <color name="colorIconTransparent">#808E4DB7</color>
     <color name="colorWhiteTransparent">#80FFFFFF</color>
     <color name="colorTransparent">#00FFFFFF</color>
@@ -14,4 +18,6 @@
     <color name="colorBlueProfileGradStart">#4B8084</color>
     <color name="colorBlueProfileGradEnd">#79BFC5</color>
     <color name="colorProgressBar">#9B4747</color>
+    <color name="colorNameRed">#E47E76</color>
+    <color name="colorLinks">#637DC2</color>
 </resources>
