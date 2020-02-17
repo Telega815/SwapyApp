@@ -3,17 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_search"
         android:icon="@drawable/ic_search_white_24dp"
         android:title="@string/title_search"/>
 
     <item
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_add_post"
         android:icon="@drawable/ic_add_circle_outline_white_24dp"
         android:title="@string/title_add_post" />
 
     <item
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_my_feed"
         android:icon="@drawable/ic_account_circle_white_24dp"
         android:title="@string/title_my_feed" />
 

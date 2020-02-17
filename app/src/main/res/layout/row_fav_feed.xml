@@ -16,7 +16,7 @@
         android:id="@+id/layout_label_profile_char"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:background="@drawable/bg_profile_char"
+        android:background="@drawable/bg_post_owner_char"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 

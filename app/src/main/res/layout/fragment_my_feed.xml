@@ -10,6 +10,7 @@
         android:id="@+id/layout_feed_head"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/colorFragmentBG"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -42,7 +43,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <SearchView
-            android:id="@+id/searchView"
+            android:id="@+id/feed_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -51,8 +52,10 @@
             android:background="@drawable/bg_feed_search_input"
             android:closeIcon="@drawable/ic_clear_gray_24dp"
             android:focusable="auto"
+            android:iconifiedByDefault="true"
             android:maxWidth="310dp"
             android:queryBackground="@drawable/bg_form_input"
+            android:queryHint="Find in feed"
             android:searchIcon="@drawable/ic_search_white_36dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/image_button_feed_menu"
@@ -76,221 +79,70 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--        android:id="@+id/constraintLayout2"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/layout_feed_head">-->
-
-<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--            android:id="@+id/layout_feed_owner"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="8dp"-->
-<!--            android:layout_marginBottom="8dp"-->
-<!--            app:layout_constraintBottom_toTopOf="@+id/layout_feed_owner_info_bottom"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent">-->
-
-<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                android:id="@+id/layout_feed_owner_char"-->
-<!--                android:layout_width="80dp"-->
-<!--                android:layout_height="80dp"-->
-<!--                android:layout_marginStart="16dp"-->
-<!--                android:layout_marginTop="8dp"-->
-<!--                android:layout_marginBottom="8dp"-->
-<!--                android:background="@drawable/bg_feed_owner_char"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintEnd_toStartOf="@+id/layout_feed_owner_indo"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent">-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/label_feed_owner_char"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="S"-->
-<!--                    android:textColor="@color/colorWhite80"-->
-<!--                    android:textSize="36sp"-->
-<!--                    android:textStyle="bold"-->
-<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent" />-->
-<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                android:id="@+id/layout_feed_owner_indo"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="0dp"-->
-<!--                android:layout_marginTop="8dp"-->
-<!--                android:layout_marginBottom="8dp"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toEndOf="@+id/layout_feed_owner_char"-->
-<!--                app:layout_constraintTop_toTopOf="parent">-->
-
-<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                    android:id="@+id/layout_feed_owner_row_first"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="0dp"-->
-<!--                    app:layout_constraintBottom_toTopOf="@+id/progressBar"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent">-->
-
-<!--                    <TextView-->
-<!--                        android:id="@+id/label_owner_inf_publications"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginStart="16dp"-->
-<!--                        android:layout_marginTop="2dp"-->
-<!--                        android:layout_marginBottom="2dp"-->
-<!--                        android:text="Publications: 12"-->
-<!--                        android:textColor="@color/colorWhiteTransparent"-->
-<!--                        android:textSize="14sp"-->
-<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                        app:layout_constraintStart_toStartOf="parent"-->
-<!--                        app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--                    <TextView-->
-<!--                        android:id="@+id/label_owner_inf_files"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginStart="8dp"-->
-<!--                        android:layout_marginTop="2dp"-->
-<!--                        android:layout_marginBottom="2dp"-->
-<!--                        android:text="Files: 50"-->
-<!--                        android:textColor="@color/colorWhiteTransparent"-->
-<!--                        android:textSize="14sp"-->
-<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                        app:layout_constraintStart_toEndOf="@+id/label_owner_inf_publications"-->
-<!--                        app:layout_constraintTop_toTopOf="parent" />-->
-<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-<!--                <ProgressBar-->
-<!--                    android:id="@+id/progressBar"-->
-<!--                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"-->
-<!--                    android:layout_width="0dp"-->
-<!--                    android:layout_height="10dp"-->
-<!--                    android:layout_marginStart="16dp"-->
-<!--                    android:layout_marginEnd="16dp"-->
-<!--                    android:background="@drawable/pb_feed_owner_space_bg"-->
-<!--                    android:progress="50"-->
-<!--                    android:progressDrawable="@drawable/pb_feed_owner_space_progr"-->
-<!--                    app:layout_constraintBottom_toTopOf="@+id/layout_feed_owner_row_last"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toBottomOf="@+id/layout_feed_owner_row_first" />-->
-
-<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                    android:id="@+id/layout_feed_owner_row_last"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="0dp"-->
-<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toBottomOf="@+id/progressBar">-->
-
-<!--                    <TextView-->
-<!--                        android:id="@+id/label_feed_owner_space"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginStart="16dp"-->
-<!--                        android:layout_marginTop="2dp"-->
-<!--                        android:layout_marginEnd="8dp"-->
-<!--                        android:layout_marginBottom="2dp"-->
-<!--                        android:text="Used 10 GB out of 20 GB"-->
-<!--                        android:textColor="@color/colorWhiteTransparent"-->
-<!--                        android:textSize="12sp"-->
-<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                        app:layout_constraintEnd_toStartOf="@+id/button_feed_owner_purchase"-->
-<!--                        app:layout_constraintStart_toStartOf="parent"-->
-<!--                        app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--                    <Button-->
-<!--                        android:id="@+id/button_feed_owner_purchase"-->
-<!--                        android:layout_width="90dp"-->
-<!--                        android:layout_height="25dp"-->
-<!--                        android:layout_marginStart="8dp"-->
-<!--                        android:layout_marginTop="2dp"-->
-<!--                        android:layout_marginEnd="16dp"-->
-<!--                        android:layout_marginBottom="2dp"-->
-<!--                        android:background="@drawable/bg_button_feed_owner_purchase"-->
-<!--                        android:paddingStart="5dp"-->
-<!--                        android:paddingEnd="5dp"-->
-<!--                        android:text="+1 TB for 5$"-->
-<!--                        android:textSize="10sp"-->
-<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                        app:layout_constraintEnd_toEndOf="parent"-->
-<!--                        app:layout_constraintStart_toEndOf="@+id/label_feed_owner_space"-->
-<!--                        app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
-<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
-<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-<!--        <LinearLayout-->
-<!--            android:id="@+id/layout_feed_owner_info_bottom"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="8dp"-->
-<!--            android:gravity="center"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/layout_feed_owner">-->
-
-<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="match_parent">-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/button_feed_owner_upload"-->
-<!--                    android:layout_width="159dp"-->
-<!--                    android:layout_height="40dp"-->
-<!--                    android:layout_marginStart="16dp"-->
-<!--                    android:layout_marginTop="8dp"-->
-<!--                    android:layout_marginEnd="8dp"-->
-<!--                    android:layout_marginBottom="8dp"-->
-<!--                    android:background="@drawable/bg_button_feed"-->
-<!--                    android:drawableStart="@drawable/ic_file_upload_purple_24dp"-->
-<!--                    android:text="Upload"-->
-<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                    app:layout_constraintEnd_toStartOf="@+id/button_feed_owner_write"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--                <Button-->
-<!--                    android:id="@+id/button_feed_owner_write"-->
-<!--                    android:layout_width="159dp"-->
-<!--                    android:layout_height="40dp"-->
-<!--                    android:layout_marginStart="8dp"-->
-<!--                    android:layout_marginTop="8dp"-->
-<!--                    android:layout_marginEnd="16dp"-->
-<!--                    android:layout_marginBottom="8dp"-->
-<!--                    android:background="@drawable/bg_button_feed"-->
-<!--                    android:drawableStart="@drawable/ic_edit_purple_24dp"-->
-<!--                    android:text="Write note"-->
-<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toEndOf="@+id/button_feed_owner_upload"-->
-<!--                    app:layout_constraintTop_toTopOf="parent" />-->
-<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-<!--        </LinearLayout>-->
-
-<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-    <ListView
-        android:id="@+id/list_feed_posts"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:divider="@drawable/divider_post"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_feed_only_favorite"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorPrimaryDark"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/recycler_feed_post"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout_feed_head">
 
-    </ListView>
+        <ImageView
+            android:id="@+id/image_only_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_favorite_purple_36dp" />
+
+        <TextView
+            android:id="@+id/label_only_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Only favorite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/switch_feed_only_favorite"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/image_only_favorite"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Switch
+            android:id="@+id/switch_feed_only_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:checked="false"
+            android:showText="false"
+            android:thumbTint="@color/switch_feed_only_favorite"
+            android:track="@drawable/bg_switch_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_feed_post"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorFragmentBG"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_feed_only_favorite" >
+
+    </androidx.recyclerview.widget.RecyclerView>
 </androidx.constraintlayout.widget.ConstraintLayout>

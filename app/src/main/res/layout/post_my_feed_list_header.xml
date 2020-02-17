@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:background="@color/colorFragmentBG"
     android:gravity="center_horizontal"
+    android:id="@+id/layout_feed_owner_info_header"
     android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout

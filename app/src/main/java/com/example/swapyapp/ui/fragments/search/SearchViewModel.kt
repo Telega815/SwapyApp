@@ -1,13 +1,14 @@
-package com.example.swapyapp.ui.feed
+package com.example.swapyapp.ui.fragments.search
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class FeedViewModel : ViewModel() {
+class SearchViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is notifications Fragment"
+        value = "This is home Fragment"
     }
+
     val text: LiveData<String> = _text
 }

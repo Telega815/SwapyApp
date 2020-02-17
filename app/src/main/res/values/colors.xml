@@ -20,4 +20,7 @@
     <color name="colorProgressBar">#9B4747</color>
     <color name="colorNameRed">#E47E76</color>
     <color name="colorLinks">#637DC2</color>
+    <color name="colorDeleteBorder">#BFAC392E</color>
+    <color name="colorDeleteStart">#BFB73E43</color>
+    <color name="colorDeleteEnd">#BFAA382C</color>
 </resources>
